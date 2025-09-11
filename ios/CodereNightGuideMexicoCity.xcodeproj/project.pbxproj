@@ -9,22 +9,36 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-CodereNightGuideMexicoCity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-CodereNightGuideMexicoCity.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		24F87D3374EF444180CAFFAE /* Sansation-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 875AF8E2BEC84A2B862AF7B3 /* Sansation-Regular.ttf */; };
+		3340C8F607164FBEA1CB0C67 /* Sansation-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09FAFAC8E3024310B456DB35 /* Sansation-Italic.ttf */; };
+		726ECE425EE44D9B87580E32 /* Sansation-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED5F63FD4B5444A6AB13A454 /* Sansation-BoldItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		7CA0DC4963D04A3AA8A4137A /* Sansation-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E594DA27382B44A0B7D8FDDC /* Sansation-Light.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AF0CFADBDA5DF73BB55BD97C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		B911138FE42B4638A1A11F61 /* Sansation-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93FE3B810C04FF2AB037A16 /* Sansation-LightItalic.ttf */; };
+		D1505A7A2E719BF6007C21E1 /* streets-of-mexico-305595.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1505A792E719BF6007C21E1 /* streets-of-mexico-305595.mp3 */; };
+		DC93AE771722479DA6C81DBF /* Sansation-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325547B8B8994FC4AA3A7CCB /* Sansation-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FAFAC8E3024310B456DB35 /* Sansation-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Italic.ttf"; path = "../assets/fonts/Sansation-Italic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CodereNightGuideMexicoCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodereNightGuideMexicoCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CodereNightGuideMexicoCity/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CodereNightGuideMexicoCity/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = CodereNightGuideMexicoCity/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		325547B8B8994FC4AA3A7CCB /* Sansation-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Bold.ttf"; path = "../assets/fonts/Sansation-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-CodereNightGuideMexicoCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodereNightGuideMexicoCity.debug.xcconfig"; path = "Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CodereNightGuideMexicoCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodereNightGuideMexicoCity.release.xcconfig"; path = "Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CodereNightGuideMexicoCity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodereNightGuideMexicoCity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CodereNightGuideMexicoCity/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CodereNightGuideMexicoCity/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		875AF8E2BEC84A2B862AF7B3 /* Sansation-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Regular.ttf"; path = "../assets/fonts/Sansation-Regular.ttf"; sourceTree = "<group>"; };
+		C93FE3B810C04FF2AB037A16 /* Sansation-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-LightItalic.ttf"; path = "../assets/fonts/Sansation-LightItalic.ttf"; sourceTree = "<group>"; };
+		D1505A792E719BF6007C21E1 /* streets-of-mexico-305595.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "streets-of-mexico-305595.mp3"; sourceTree = "<group>"; };
+		E594DA27382B44A0B7D8FDDC /* Sansation-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Light.ttf"; path = "../assets/fonts/Sansation-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED5F63FD4B5444A6AB13A454 /* Sansation-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-BoldItalic.ttf"; path = "../assets/fonts/Sansation-BoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,20 @@
 			name = CodereNightGuideMexicoCity;
 			sourceTree = "<group>";
 		};
+		25ED5872C9BB416CBBEEBA8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1505A792E719BF6007C21E1 /* streets-of-mexico-305595.mp3 */,
+				325547B8B8994FC4AA3A7CCB /* Sansation-Bold.ttf */,
+				ED5F63FD4B5444A6AB13A454 /* Sansation-BoldItalic.ttf */,
+				09FAFAC8E3024310B456DB35 /* Sansation-Italic.ttf */,
+				E594DA27382B44A0B7D8FDDC /* Sansation-Light.ttf */,
+				C93FE3B810C04FF2AB037A16 /* Sansation-LightItalic.ttf */,
+				875AF8E2BEC84A2B862AF7B3 /* Sansation-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +103,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				25ED5872C9BB416CBBEEBA8B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -160,7 +189,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D1505A7A2E719BF6007C21E1 /* streets-of-mexico-305595.mp3 in Resources */,
 				AF0CFADBDA5DF73BB55BD97C /* PrivacyInfo.xcprivacy in Resources */,
+				DC93AE771722479DA6C81DBF /* Sansation-Bold.ttf in Resources */,
+				726ECE425EE44D9B87580E32 /* Sansation-BoldItalic.ttf in Resources */,
+				3340C8F607164FBEA1CB0C67 /* Sansation-Italic.ttf in Resources */,
+				7CA0DC4963D04A3AA8A4137A /* Sansation-Light.ttf in Resources */,
+				B911138FE42B4638A1A11F61 /* Sansation-LightItalic.ttf in Resources */,
+				24F87D3374EF444180CAFFAE /* Sansation-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
