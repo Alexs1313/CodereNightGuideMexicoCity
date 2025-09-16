@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Platform } from 'react-native';
 import { WebView } from 'react-native-webview';
 import CoderenightBg from './CoderenightBg';
 
@@ -83,9 +83,21 @@ const Coderenightmnldr = () => {
     <CoderenightBg>
       <View style={styles.container}>
         <View style={{ alignItems: 'center' }}>
-          <Image
-            source={require('../../assets/images/coderenightldrlogo.png')}
-          />
+          {Platform.OS === 'ios' ? (
+            <Image
+              source={require('../../assets/images/coderenightldrlogo.png')}
+            />
+          ) : (
+            <Image
+              source={require('../../assets/images/coderespinlogo.png')}
+              style={{
+                width: 400,
+                height: 400,
+                borderRadius: 12,
+                marginTop: 50,
+              }}
+            />
+          )}
         </View>
 
         <WebView

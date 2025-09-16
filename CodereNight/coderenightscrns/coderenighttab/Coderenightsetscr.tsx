@@ -305,7 +305,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#A0A0A0',
     borderRadius: 12,
-    borderTopColor: '#004D26',
     justifyContent: 'center',
     gap: 8,
     marginBottom: 31,

@@ -1,6 +1,7 @@
 import {
   Image,
   ImageSourcePropType,
+  Platform,
   StyleSheet,
   Text,
   View,
@@ -20,8 +21,11 @@ type entrydta = {
 
 const coderenightentrydta: entrydta[] = [
   {
-    coderenightttl: `Welcome to Codere 
-Night Guide`,
+    coderenightttl:
+      Platform.OS === 'ios'
+        ? `Welcome to Codere Night Guide`
+        : `Welcome to Spin 
+Around Mexico City`,
     coderenightdesc:
       'Discover Mexico City like never before. Unlock hidden gems, explore iconic night spots, and let our guide lead you through the city after dark.',
     coderenightimg: require('../../../assets/images/coderenightentr1.png'),
