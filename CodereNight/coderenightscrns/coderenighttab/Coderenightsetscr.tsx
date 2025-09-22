@@ -77,7 +77,12 @@ const Coderenightsetscr = () => {
 
   return (
     <CoderenightBg>
-      <View style={styles.coderenightcontainer}>
+      <View
+        style={[
+          styles.coderenightcontainer,
+          isVisibleMdl && { filter: 'blur(10px)' },
+        ]}
+      >
         <View style={styles.coderenightheader}>
           <View style={styles.coderenightcoinwrap}>
             <Text style={styles.coderenightquant}>{codereNightCoins}</Text>
@@ -165,14 +170,6 @@ const Coderenightsetscr = () => {
         </LinearGradient>
       </View>
 
-      {isVisibleMdl && (
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={0}
-        />
-      )}
-
       <Modal transparent animationType="fade" visible={isVisibleMdl}>
         <View
           style={{
@@ -181,11 +178,13 @@ const Coderenightsetscr = () => {
             flex: 1,
           }}
         >
-          <BlurView
-            style={StyleSheet.absoluteFill}
-            blurType="light"
-            blurAmount={0}
-          />
+          {Platform.OS === 'ios' && (
+            <BlurView
+              style={StyleSheet.absoluteFill}
+              blurType="light"
+              blurAmount={0}
+            />
+          )}
 
           <View style={styles.coderenightheadermdl}>
             <Text style={[styles.coderenightheadttlmdl]}>
@@ -221,7 +220,10 @@ const Coderenightsetscr = () => {
 };
 
 const styles = StyleSheet.create({
-  coderenightcontainer: { alignItems: 'center', paddingBottom: 150 },
+  coderenightcontainer: {
+    alignItems: 'center',
+    paddingBottom: 150,
+  },
   coderenightheadgrad: {
     width: '90%',
     borderRadius: 12,
@@ -240,7 +242,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#004D26',
     borderWidth: 1,
     borderColor: '#A0A0A0',
-    borderRadius: 12,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
     borderTopColor: '#004D26',
     justifyContent: 'center',
     gap: 8,

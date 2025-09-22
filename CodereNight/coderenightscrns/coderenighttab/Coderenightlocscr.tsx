@@ -156,7 +156,13 @@ const Coderenightlocscr = () => {
 
   return (
     <CoderenightBg>
-      <View style={styles.coderenightcontainer}>
+      <View
+        style={[
+          styles.coderenightcontainer,
+          isVisibleMdl && { filter: 'blur(10px)' },
+          isVisibleCongratsMdl && { filter: 'blur(10px)' },
+        ]}
+      >
         <View style={styles.coderenightheader}>
           <TouchableOpacity
             activeOpacity={0.6}
@@ -198,18 +204,6 @@ const Coderenightlocscr = () => {
         ))}
       </View>
 
-      {Platform.OS === 'android' && (
-        <>
-          {(isVisibleCongratsMdl || isVisibleMdl) && (
-            <BlurView
-              style={StyleSheet.absoluteFill}
-              blurType="light"
-              blurAmount={0}
-            />
-          )}
-        </>
-      )}
-
       <Modal transparent animationType="fade" visible={isVisibleMdl}>
         <View
           style={{
@@ -218,11 +212,13 @@ const Coderenightlocscr = () => {
             flex: 1,
           }}
         >
-          <BlurView
-            style={StyleSheet.absoluteFill}
-            blurType="light"
-            blurAmount={0}
-          />
+          {Platform.OS === 'ios' && (
+            <BlurView
+              style={StyleSheet.absoluteFill}
+              blurType="light"
+              blurAmount={1}
+            />
+          )}
 
           <View style={styles.coderenightheadermdl}>
             <Text style={[styles.coderenightheadttlmdl]}>
@@ -261,11 +257,13 @@ const Coderenightlocscr = () => {
             justifyContent: 'flex-start',
           }}
         >
-          <BlurView
-            style={StyleSheet.absoluteFill}
-            blurType="light"
-            blurAmount={0}
-          />
+          {Platform.OS === 'ios' && (
+            <BlurView
+              style={StyleSheet.absoluteFill}
+              blurType="light"
+              blurAmount={1}
+            />
+          )}
 
           <View style={styles.coderenightheadermdl}>
             <Text
@@ -313,18 +311,17 @@ const styles = StyleSheet.create({
   coderenightcontainer: { alignItems: 'center', paddingBottom: 140 },
   coderenightheadgrad: {
     width: '100%',
-    borderRadius: 13,
+    borderRadius: 12,
   },
   coderenightheadermdl: {
     width: '100%',
-    padding: 55,
-    paddingTop: 70,
-    paddingBottom: 40,
+    padding: 18,
+    paddingTop: 98,
     alignItems: 'center',
     backgroundColor: '#004D26',
     borderWidth: 1,
-    borderColor: '#A0A0A0',
     borderRadius: 12,
+    borderColor: '#A0A0A0',
     justifyContent: 'center',
     gap: 8,
     marginBottom: 31,
@@ -351,7 +348,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#004D26',
     borderWidth: 1,
     borderColor: '#A0A0A0',
-    borderRadius: 12,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
     borderTopColor: '#004D26',
     flexDirection: 'row',
     justifyContent: 'center',

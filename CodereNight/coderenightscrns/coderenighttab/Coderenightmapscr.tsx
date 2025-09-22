@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
   coderenightcontainer: { alignItems: 'center' },
   coderenightheadgrad: {
     width: '100%',
-    borderRadius: 12,
   },
   coderenightheader: {
     width: '100%',
@@ -143,7 +142,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#004D26',
     borderWidth: 1,
     borderColor: '#A0A0A0',
-    borderRadius: 12,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
     borderTopColor: '#004D26',
     justifyContent: 'center',
     gap: 8,

@@ -83,7 +83,7 @@ const Coderenightentrscr = () => {
           ]}
         />
 
-        <View style={styles.container}>
+        <View>
           <Coderenightbtn
             codereImg={require('../../../assets/images/coderenightmainbt.png')}
             codereBtnStyles={{ borderRadius: 12 }}
@@ -106,7 +106,8 @@ const styles = StyleSheet.create({
   coderenightcontainer: { alignItems: 'center', marginBottom: 40 },
   coderenightheadgrad: {
     width: '100%',
-    borderRadius: 13,
+    borderBottomLeftRadius: 13,
+    borderBottomRightRadius: 13,
   },
   coderenighthead: {
     width: '100%',
@@ -121,7 +122,6 @@ const styles = StyleSheet.create({
     lineHeight: 26,
     marginBottom: 34,
     textAlign: 'center',
-    height: 50,
   },
   coderenightdesctext: {
     fontFamily: 'Sansation-Bold',

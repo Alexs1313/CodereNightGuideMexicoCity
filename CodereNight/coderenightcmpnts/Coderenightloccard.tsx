@@ -5,6 +5,7 @@ import { useCodereRouteStore } from '../coderenightstr/coderenightcontxt';
 import { useCallback, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
+  Dimensions,
   Image,
   Share,
   StyleSheet,
@@ -12,6 +13,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 const Coderenightloccard = ({
   loc,
@@ -30,6 +33,8 @@ const Coderenightloccard = ({
     saveCodereNightUnlockedLoc,
     fetchCodereNightUnlockedLoc,
     setCodereNightUnlockedLoc,
+    setCodereNightCoins,
+    saveCodereCoins,
   } = useCodereRouteStore();
 
   useFocusEffect(
@@ -87,6 +92,9 @@ Coordinates: ${loc.coderenightlat} ${loc.coderenightlong}
       });
       setCodereNightUnlockedLoc(isUnlockedCodereLoc),
         saveCodereNightUnlockedLoc(isUnlockedCodereLoc);
+
+      setCodereNightCoins(codereNightCoins - 20),
+        saveCodereCoins(codereNightCoins - 20);
     }
   };
 
@@ -96,12 +104,12 @@ Coordinates: ${loc.coderenightlat} ${loc.coderenightlong}
       colors={['rgba(136, 136, 136, 1)', 'rgba(42, 42, 42, 0.7)']}
     >
       <View style={styles.coderenighthead}>
-        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{}}>
           <Image
             source={loc.coderenightimg}
             style={{
-              width: 180,
-              height: 149,
+              height: 140,
+              width: 0.33 * SCREEN_WIDTH,
               borderRadius: 12,
             }}
           />
@@ -117,20 +125,29 @@ Coordinates: ${loc.coderenightlat} ${loc.coderenightlong}
 
         <View style={{ alignItems: 'center', justifyContent: 'space-around' }}>
           <View style={{ alignItems: 'center' }}>
-            <Text style={styles.coderenighttitle}>{loc.coderenightname}</Text>
+            <Text style={[styles.coderenighttitle, { flexShrink: 1 }]}>
+              {loc.coderenightname}
+            </Text>
 
             <View style={styles.coderenightwrap}>
               <Image
                 source={require('../../assets/icons/coderenighpoint.png')}
               />
               <Text style={styles.coderenightdesctext}>
-                {loc.coderenightlat} {loc.coderenightlong}
+                {loc.coderenightlat}, {loc.coderenightlong}
               </Text>
             </View>
           </View>
 
           {loc.coderenightunlocked ? (
-            <View style={{ flexDirection: 'row', gap: 8, bottom: 10, left: 5 }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                gap: 5,
+                justifyContent: 'center',
+                marginTop: 10,
+              }}
+            >
               <TouchableOpacity
                 activeOpacity={0.6}
                 onPress={shareCodereNightLocation}
@@ -212,7 +229,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-    marginBottom: 26,
   },
   coderebtnstyle: {
     width: 91,

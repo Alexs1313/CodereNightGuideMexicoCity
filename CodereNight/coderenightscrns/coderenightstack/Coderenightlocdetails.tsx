@@ -10,6 +10,7 @@ import {
   Image,
   ImageBackground,
   Modal,
+  Platform,
   ScrollView,
   Share,
   StyleSheet,
@@ -138,7 +139,12 @@ ${loc.coderenightdesc}
       style={{ flex: 1 }}
     >
       <ScrollView showsVerticalScrollIndicator={false} bounces={false}>
-        <View style={styles.coderenightcontainer}>
+        <View
+          style={[
+            styles.coderenightcontainer,
+            isVisibleMdl && { filter: 'blur(10px)' },
+          ]}
+        >
           <View style={styles.coderenightheader}>
             <TouchableOpacity
               activeOpacity={0.6}
@@ -325,13 +331,14 @@ ${loc.coderenightdesc}
       </View>
 
       <Modal transparent animationType="fade" visible={isVisibleMdl}>
-        {isVisibleMdl && (
+        {Platform.OS === 'ios' && (
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
             blurAmount={0}
           />
         )}
+
         <View
           style={{
             alignItems: 'center',
@@ -393,7 +400,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#004D26',
     borderWidth: 1,
     borderColor: '#A0A0A0',
-    borderRadius: 12,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
     borderTopColor: '#004D26',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -497,12 +505,12 @@ const styles = StyleSheet.create({
   },
   coderenightbtn: {
     backgroundColor: '#006633',
-    width: 186,
-    height: 47,
+    width: 194,
+    height: 54,
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 20,
+
     borderWidth: 1,
     borderColor: 'rgba(160, 160, 160, 1)',
   },
