@@ -159,8 +159,9 @@ const Coderenightlocscr = () => {
       <View
         style={[
           styles.coderenightcontainer,
-          isVisibleMdl && { filter: 'blur(10px)' },
-          isVisibleCongratsMdl && { filter: 'blur(10px)' },
+          Platform.OS === 'android' && isVisibleMdl && { filter: 'blur(10px)' },
+          Platform.OS === 'android' &&
+            isVisibleCongratsMdl && { filter: 'blur(10px)' },
         ]}
       >
         <View style={styles.coderenightheader}>

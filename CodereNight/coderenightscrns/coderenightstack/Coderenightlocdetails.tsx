@@ -142,7 +142,8 @@ ${loc.coderenightdesc}
         <View
           style={[
             styles.coderenightcontainer,
-            isVisibleMdl && { filter: 'blur(10px)' },
+            Platform.OS === 'android' &&
+              isVisibleMdl && { filter: 'blur(10px)' },
           ]}
         >
           <View style={styles.coderenightheader}>

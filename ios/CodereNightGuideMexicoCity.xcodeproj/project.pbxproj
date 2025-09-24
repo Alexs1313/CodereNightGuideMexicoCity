@@ -18,6 +18,9 @@
 		AF0CFADBDA5DF73BB55BD97C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		B911138FE42B4638A1A11F61 /* Sansation-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93FE3B810C04FF2AB037A16 /* Sansation-LightItalic.ttf */; };
 		D1505A7A2E719BF6007C21E1 /* streets-of-mexico-305595.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1505A792E719BF6007C21E1 /* streets-of-mexico-305595.mp3 */; };
+		D1505A8C2E83FF66007C21E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1505A8B2E83FF66007C21E1 /* AVFoundation.framework */; };
+		D1505A8E2E83FF7E007C21E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1505A8D2E83FF7E007C21E1 /* AudioToolbox.framework */; };
+		D1505A902E83FF89007C21E1 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1505A8F2E83FF89007C21E1 /* AVKit.framework */; };
 		DC93AE771722479DA6C81DBF /* Sansation-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325547B8B8994FC4AA3A7CCB /* Sansation-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		875AF8E2BEC84A2B862AF7B3 /* Sansation-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Regular.ttf"; path = "../assets/fonts/Sansation-Regular.ttf"; sourceTree = "<group>"; };
 		C93FE3B810C04FF2AB037A16 /* Sansation-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-LightItalic.ttf"; path = "../assets/fonts/Sansation-LightItalic.ttf"; sourceTree = "<group>"; };
 		D1505A792E719BF6007C21E1 /* streets-of-mexico-305595.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "streets-of-mexico-305595.mp3"; sourceTree = "<group>"; };
+		D1505A8B2E83FF66007C21E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D1505A8D2E83FF7E007C21E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D1505A8F2E83FF89007C21E1 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		E594DA27382B44A0B7D8FDDC /* Sansation-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Light.ttf"; path = "../assets/fonts/Sansation-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED5F63FD4B5444A6AB13A454 /* Sansation-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-BoldItalic.ttf"; path = "../assets/fonts/Sansation-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -46,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1505A902E83FF89007C21E1 /* AVKit.framework in Frameworks */,
+				D1505A8E2E83FF7E007C21E1 /* AudioToolbox.framework in Frameworks */,
+				D1505A8C2E83FF66007C21E1 /* AVFoundation.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-CodereNightGuideMexicoCity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +91,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1505A8F2E83FF89007C21E1 /* AVKit.framework */,
+				D1505A8D2E83FF7E007C21E1 /* AudioToolbox.framework */,
+				D1505A8B2E83FF66007C21E1 /* AVFoundation.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-CodereNightGuideMexicoCity.a */,
 			);
@@ -227,9 +239,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,9 +282,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodereNightGuideMexicoCity/Pods-CodereNightGuideMexicoCity-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
